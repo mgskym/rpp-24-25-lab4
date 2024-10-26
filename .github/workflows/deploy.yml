@@ -18,8 +18,6 @@ jobs:
           cp -r en/index.html $name
           cp -r ru/index.html $name
           cp -r index.html $name
-      - name: Create folder site
-        run: |
           mkdir site
           cp -r $name site
       - name: Deploy to GitHub Pages
