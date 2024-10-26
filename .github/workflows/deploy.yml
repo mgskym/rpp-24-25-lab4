@@ -15,8 +15,8 @@ jobs:
           name=$(basename ${{ github.ref }})
           echo $name
           mkdir $name
-          cp -r en/index.html $name
-          cp -r ru/index.html $name
+          cp -r en $name
+          cp -r ru $name
           cp -r index.html $name
           mkdir site
           cp -r $name site
