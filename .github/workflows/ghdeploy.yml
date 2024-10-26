@@ -13,9 +13,9 @@ jobs:
       - name: Create folder & copy files
         runs: |
           mkdir site
-          cp en/index.html site
-          cp ru/index.html site
-          cp index.html site
+          cp -r en/index.html site
+          cp -r ru/index.html site
+          cp -r index.html site
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
