@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Create folder & copy files
         run: |
-          name = $(basename ${{ github.ref }})
+          name=$(basename ${{ github.ref }})
           echo $name
           mkdir $name
           cp -r en/index.html $name
