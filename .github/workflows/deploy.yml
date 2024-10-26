@@ -12,10 +12,14 @@ jobs:
         uses: actions/checkout@v4
       - name: Create folder & copy files
         run: |
+          mkdir v1
+          cp -r en/index.html v1
+          cp -r ru/index.html v1
+          cp -r index.html v1
+      - name: Create folder site
+        run: |
           mkdir site
-          cp -r en/index.html site
-          cp -r ru/index.html site
-          cp -r index.html site
+          cp -r v1 site
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
